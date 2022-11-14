@@ -69,7 +69,6 @@ else:
     print(dog + " could not locate " + owner + " despite his efforts to search high and low.")
     print("Will " + owner + " ever be seen again?")
     print("Who will protect " + city + " without " + owner + "?")
-    print("Tune in next time to see the fate of " + city + " and " + dog "!")
-    print("\n)")
+    print("(\n)")
 
     
