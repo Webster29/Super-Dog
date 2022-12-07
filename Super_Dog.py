@@ -21,8 +21,8 @@ while keepGoing.lower() == "yes":
         villain =input("Please enter your favorite Super Villain:  ")
 
     hero =input("\nWho is your favorite Super Hero? (Cannot be the same as Super Dog's owner.)  ")
-    while (len(hero) == 0):
-        hero =input("Please enter your favorite Super Hero:  ")
+    while (len(hero) == 0) or owner.lower() == hero.lower():
+        hero =input("Please enter your favorite Super Hero (Must also be different from Super Dog's Owner):  ")
 
     print("\nOnward to our adventure!")
     print("\nToday we visit our lovely city of " + city + ".")
@@ -38,8 +38,8 @@ while keepGoing.lower() == "yes":
     while fightVillain.lower() != "yes" and fightVillain.lower() != "no":
         fightVillain =input("Please enter yes or no to continue:  ")
 
-    if fightVillain == "yes":
-        print(villain + " is trying to rob a bank for the precious diamonds!")
+    if fightVillain.lower() == "yes":
+        print("\n" + villain + " is trying to rob a bank for the precious diamonds!")
         print("If " + dog + " can stop " + villain + ", we can find the secret hideout for the Band of Villains!")
         print(dog + " uses his freeze breath to trap " + villain + "!")
         print("After a few minutes of questioning, " + dog + " gets a solid clue to finding the hideout!")
@@ -57,7 +57,7 @@ while keepGoing.lower() == "yes":
     while helpHero.lower() != "yes" and helpHero.lower() != "no":
         helpHero =input("Please enter  yes or no to conitinue:  ")
 
-    if helpHero == "yes":
+    if helpHero.lower() == "yes":
         print("\nIf we help " + hero + ", the League of Heroes may join our fight to rescue " + owner + "!")
         print(dog + " jumps into the fight and helps " + hero + " pummel his enemies!")
         print(hero + " agrees to call upon the League of Heroes to help save " + owner + ".")
@@ -68,7 +68,7 @@ while keepGoing.lower() == "yes":
         print("Because " + dog + " left the fight, the League of Heroes have no idea that " + owner + " has been captured.")
         print("Looks like " + dog + " is on their own!")
 
-    if fightVillain == "yes" and helpHero == "yes":
+    if fightVillain.lower() == "yes" and helpHero.lower() == "yes":
         print("\nWith the League of Heroes with us and the clue from stopping " + villain + ",")
         print("we can set forth our efforts to find " + owner + ".")
         print("\nWithin the next hour, " + dog + " spots " + owner + " through a wall using his X-Ray Vision!")
@@ -78,12 +78,12 @@ while keepGoing.lower() == "yes":
         print("The League of Heroes captured the Band of Villains and took them all to jail!")
         print("\n" + dog + " and " + owner + " set off for home for much deserved rest!")
         print("\n" + city + " can rest easy now knowing " + owner + " is safe and soon ready to fight crime again with " + dog + " at their side!")
-    elif fightVillain == "yes":
+    elif fightVillain.lower() == "yes":
         print("\nAfter spending the day in " + city + ", " + owner + " was located at the Band of Villains' secret hideout!")
         print(dog + " fought alone and bravely and ultimately saved " + owner + "!")
         print("Because " + dog + " did not help " + hero + ", the League of Heroes did not come to the fight.")
         print("Both "+ dog + " and " + owner + " rushed to seek medical attention.")
-        print(dog + " and " + owner + " were back to protecting " + city + "after a few short weeks of recovery!")
+        print(dog + " and " + owner + " were back to protecting " + city + " after a few short weeks of recovery!")
     else:
         print("\n" + dog + " did not get any intel from " + villain + " and no help from the League of Heroes.")
         print(dog + " could not locate " + owner + " despite his efforts to search high and low.")
@@ -93,6 +93,6 @@ while keepGoing.lower() == "yes":
         
     keepGoing =input("\nWould you like to go through our adventure again?  Enter yes or no:  ")
     while keepGoing.lower() == "no":
-        keepGoing =input("Thanks for playing our adventure! See you next time!  (Press Enter to Exit)")
+        keepGoing =input("\nThanks for playing our adventure! See you next time!  (Press Enter to Exit)")
 
     
