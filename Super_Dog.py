@@ -92,7 +92,10 @@ while keepGoing.lower() == "yes":
         
         
     keepGoing =input("\nWould you like to go through our adventure again?  Enter yes or no:  ")
-    while keepGoing.lower() == "no":
-        keepGoing =input("\nThanks for playing our adventure! See you next time!  (Press Enter to Exit)")
+    while keepGoing.lower() != "yes":
+        break
+
+    print("\nThanks for playing our adventure! See you next time!")
+    
 
     
